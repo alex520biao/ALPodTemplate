@@ -2,8 +2,8 @@
 //  CPDAppDelegate.m
 //  PROJECT
 //
-//  Created by CocoaPods on TODAYS_DATE.
-//  Copyright (c) 2014 PROJECT_OWNER. All rights reserved.
+//  Created by PROJECT_OWNER on TODAYS_DATE.
+//  Copyright (c) TODAYS_YEAR PROJECT_OWNER. All rights reserved.
 //
 
 #import "CPDAppDelegate.h"
