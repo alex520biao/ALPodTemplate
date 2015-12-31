@@ -7,12 +7,21 @@
 //
 
 #import "CPDAppDelegate.h"
+#import "CPDViewController.h"
 
 @implementation CPDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    CPDViewController *mainViewController = [[CPDViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+    nav.navigationBarHidden = YES;//是否隐藏导航栏
+    nav.navigationBar.barStyle = UIBarStyleBlack;
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 							
