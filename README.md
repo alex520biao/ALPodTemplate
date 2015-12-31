@@ -31,26 +31,27 @@ It is open to communal input, but adding new features, or new ideas are probably
 	
 ALPodTemplate Fork From [https://github.com/cocoapods/pod-template](https://github.com/cocoapods/pod-template)
 
-##PROJECT模板工程说明
+##PROJECT模板工程字符串替换
 ProjectManipulator.rb中会自动替换PROJECT模板工程中的以下字符串:
 
-     "PROJECT_OWNER" => @configurator.user_name,
-     "TODAYS_DATE" => @configurator.date,
-     "TODAYS_YEAR" => @configurator.year,
-     "PROJECT" => @configurator.pod_name,
-     "CPD" => @prefix	
+	"PROJECT_OWNER" => @configurator.user_name,
+	"TODAYS_DATE" => @configurator.date,
+	"TODAYS_YEAR" => @configurator.year,
+	"PROJECT" => @configurator.pod_name,
+	"CPD" => @prefix	
  
-##Pod文件中字符串替换
-包括pod的md、configure、LICENSE、NAME.podspec、POD_LICENSE等文件均支持以下变量
+##Pod文件字符串替换
+包括pod的`.md`、 `.configure`、 `LICENSE`、 `NAME.podspec`、 `POD_LICENSE`、 `.travis.yml`等文件中均支持使用变量。
 
-* pod名称 	 
-	 
-	 	${POD_NAME}    
-	 
-* 作者名
-	
-		${USER_NAME} 
-* 作者邮箱	 
-		
-		${USER_EMAIL}  
-	 
+* pod名称:`${POD_NAME}`
+* 作者名:`${USER_NAME}` 
+* 作者邮箱:`${USER_EMAIL}`
+
+这些自定义变量最终会被`TemplateConfigurator.rb`的Ruby代码赋值,cocoapod使用Ruby编写,因此Ruby可以获得`环境参数` 以及 `pod lib create`命令参数:
+
+    text.gsub!("${POD_NAME}", @pod_name)
+    text.gsub!("${REPO_NAME}", @pod_name.gsub('+', '-'))
+    text.gsub!("${USER_NAME}", user_name)
+    text.gsub!("${USER_EMAIL}", user_email)
+    text.gsub!("${YEAR}", year)
+    text.gsub!("${DATE}", date)	 
