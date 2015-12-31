@@ -1,5 +1,5 @@
-source 'https://git.xiaojukeji.com/one-ios/Specs.git'
-source 'https://git.xiaojukeji.com/ios/cocoapods-specs.git'
+#source 'https://xxxx/cocoapods-specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 
 # We don't use Swift internally. Disable this option.
 #use_frameworks!
@@ -24,7 +24,7 @@ target '${POD_NAME}_Example', :exclusive => true do
   # it's required to do so in Podfile.
   #
   # Sample:
-  #   local_pod "AnInternalPod", :git => "https://git.xiaojukeji.com/path/to/pod.git", :tag => "stable-tag"
+  #   local_pod "AnInternalPod", :git => "https://github.com/alex520biao/path/to/pod.git", :tag => "stable-tag"
 
   # Add Example specific dependencies here...
 
