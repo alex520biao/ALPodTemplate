@@ -28,3 +28,5 @@ It is open to communal input, but adding new features, or new ideas are probably
 通过以下命令使用模板创建新Pod:
 
 	pod lib create --template-url=https://github.com/alex520biao/ALPodTemplate.git ALXXXXPod
+	
+ALPodTemplate Fork From [https://github.com/cocoapods/pod-template](https://github.com/cocoapods/pod-template)	
