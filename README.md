@@ -29,4 +29,28 @@ It is open to communal input, but adding new features, or new ideas are probably
 
 	pod lib create --template-url=https://github.com/alex520biao/ALPodTemplate.git ALXXXXPod
 	
-ALPodTemplate Fork From [https://github.com/cocoapods/pod-template](https://github.com/cocoapods/pod-template)	
+ALPodTemplate Fork From [https://github.com/cocoapods/pod-template](https://github.com/cocoapods/pod-template)
+
+##PROJECT模板工程说明
+ProjectManipulator.rb中会自动替换PROJECT模板工程中的以下字符串:
+
+     "PROJECT_OWNER" => @configurator.user_name,
+     "TODAYS_DATE" => @configurator.date,
+     "TODAYS_YEAR" => @configurator.year,
+     "PROJECT" => @configurator.pod_name,
+     "CPD" => @prefix	
+ 
+##Pod文件中字符串替换
+包括pod的md、configure、LICENSE、NAME.podspec、POD_LICENSE等文件均支持以下变量
+
+* pod名称 	 
+	 
+	 	${POD_NAME}    
+	 
+* 作者名
+	
+		${USER_NAME} 
+* 作者邮箱	 
+		
+		${USER_EMAIL}  
+	 
