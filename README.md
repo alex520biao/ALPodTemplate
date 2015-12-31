@@ -23,3 +23,8 @@ It is open to communal input, but adding new features, or new ideas are probably
 ## Requirements:
 
 - CocoaPods 0.31
+
+## Demo
+通过以下命令使用模板创建新Pod:
+
+	pod lib create --template-url=https://github.com/alex520biao/ALPodTemplate.git ALXXXXPod
