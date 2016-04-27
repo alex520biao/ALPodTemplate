@@ -30,9 +30,9 @@ Pod::Spec.new do |s|
   s.source_files = 'Pod/Classes/**/*'
 
   # Uncomment following lines if ${POD_NAME} has some resource files.
-  # s.resource_bundles = {
-  #   '${POD_NAME}' => ['Pod/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    '${POD_NAME}' => ['Pod/Assets/*.png']
+  }
 
   # Uncomment following lines if ${POD_NAME} needs to link with some static libraries.
   # s.vendored_libraries = [
