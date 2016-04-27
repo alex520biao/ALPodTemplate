@@ -12,4 +12,9 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+/*!
+ *  @brief 底层导航控制器
+ */
+@property (strong, nonatomic) UINavigationController *naviController;
+
 @end
